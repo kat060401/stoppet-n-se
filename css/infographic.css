@@ -1,21 +1,27 @@
 #head-txt {
-  fill: rgb(54, 54, 54);
+  fill: #4c3d19;
 }
 .info-graphic,
 .info-text {
-  background-color: var(--color-info-bg);
-  padding: 20px 0;
+  background-color: #354024;
+  padding: 1em;
+  display: inline-block;
 }
 .info-graphic {
   border-radius: 0;
-  margin: 60px auto 80px auto;
+  margin: auto;
+  display: inline-block;
+}
+.billede {
+  width: fit-content;
 }
 .info-text h2 {
   line-height: 3rem;
   text-align: center;
-  background-color: var(--color-headline-bg);
+  background-color: light-dark(#889063, #1f2518);
   color: var(--color-headline-text-page);
   margin-bottom: 1rem;
+  color: aliceblue;
 }
 .info-text h3 {
   font-size: 0.8rem;
@@ -26,6 +32,7 @@
 }
 .info-text > *:not(:first-child) {
   margin: 0 clamp(1rem, 10%, 7rem);
+  color: aliceblue;
 }
 .info-text p {
   font-size: 0.8rem;
@@ -35,8 +42,21 @@
 }
 .info-box {
   padding: 1.5rem 1rem 0.5rem 1rem;
-  background-color: var(--color-infobox-1-bg);
+  background-color: light-dark(#889063, #1f2518);
 }
 .info-box:nth-of-type(2n) {
   background-color: var(--color-infobox-2-bg);
+  background-color: light-dark(#cfbb99, #524630);
+}
+
+#hand:hover {
+  filter: brightness(130%);
+}
+
+#damp:hover {
+  filter: brightness(130%);
+}
+
+#salt:hover {
+  filter: brightness(130%);
 }

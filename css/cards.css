@@ -1,11 +1,11 @@
 .daily_card {
-  background-color: var(--color-card-bg);
   display: grid;
   grid-template-columns: 3fr 5fr;
   gap: 10px;
   padding: 40px 0 40px 20px;
   border-radius: var(--border-radius);
   height: minmax(200px, min-content);
+  background-color: light-dark(#889063, #3d3f2f);
 }
 .daily_text {
   display: grid;
@@ -13,7 +13,7 @@
   gap: 10px;
 }
 .daily_text h2 {
-  background-color: var(--color-headline-bg);
+  background-color: light-dark(#354024, #1c2219);
   color: var(--color-text-inverted);
   padding: calc(1.1rem / 1.5) 0 calc(1.1rem / 2) 1rem;
   margin: 0 0 0.5rem 0;
@@ -40,8 +40,10 @@
   height: minmax(300px, min-content);
 }
 .news_card:nth-child(2n) {
-  background-color: var(--color-news-bg-inverted);
+  background-color: light-dark(#354024, #1c2219);
+  color: antiquewhite;
 }
+
 .news_card > * {
   padding: 0 1rem;
 }
@@ -53,8 +55,7 @@
 }
 .news_card:first-child:before {
   content: "BREAKING NEWS";
-  background-color: var(--color-headline-bg);
-  color: var(--color-headline-text-page);
+  background-color: light-dark(#889063, #3d3f2f);
   font-size: var(--font-h3-size);
   font-weight: var(--font-weight-medium);
   text-align: center;
@@ -63,9 +64,11 @@
 }
 .news_card:first-child {
   border-radius: var(--border-radius) var(--border-radius) 0 0;
+  background-color: light-dark(#889063, #3d3f2f);
 }
 .news_card:last-child {
   border-radius: 0 0 var(--border-radius) var(--border-radius);
+  background-color: light-dark(#889063, #3d3f2f);
 }
 
 .news_card .cta_btn {
@@ -74,20 +77,33 @@
 .cta_btn {
   display: inline-block;
   padding: 0.4rem 1rem;
-  background-color: var(--color-cta-card-bg);
-  color: var(--color-text-inverted);
-  text-decoration: none;
+  color: whitesmoke;
+  background-color: light-dark(#4c3d19, #2e2510);
+  margin-left: 1em;
+
   width: max-content;
   border-radius: var(--border-radius);
 }
 .news_card .cta_btn {
-  background-color: var(--color-cta-newscard-bg);
+  background-color: light-dark(#4c3d19, #2e2510);
 }
 .news_card:nth-of-type(2n) .cta_btn {
-  background-color: var(--color-cta-newscard-bg-inverted);
-  color: var(--color-text);
+  background-color: light-dark(#4c3d19, #2e2510);
 }
 .cta_btn:after {
   content: "\2192";
   margin-left: 1rem;
+}
+
+.afprøv {
+  background-color: light-dark(#354024, #1c2219);
+  color: aliceblue;
+  padding: 1em 1em;
+  border-radius: 8px;
+  margin: 0 1em;
+}
+
+.imgarticle {
+  margin-bottom: 30px;
+  margin-top: 30px;
 }

@@ -1,4 +1,11 @@
 html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+html {
   font-family: var(--font-family-sans);
   color: var(--color-text);
   background-color: var(--color-bg);
@@ -10,7 +17,7 @@ header {
 
 #main-disclamer {
   height: 225px;
-  background-color: var(--color-head-bg);
+  background-color: light-dark(#354024, #1b2012);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -32,7 +39,7 @@ main section {
 h1 {
   font-size: var(--font-h1-size);
   font-weight: var(--font-weight-bold);
-  color: var(--color-text-inverted);
+  color: aliceblue;
   margin: 5px 0;
   line-height: 1.3rem;
   text-align: left;
@@ -42,7 +49,7 @@ h1 {
 #register h1 {
   margin: 40px 0 20px 0;
   padding: 15px 30px;
-  background-color: var(--color-head-bg);
+  background-color: light-dark(#354024, #1b2012);
   font-size: var(--font-h2-size);
 }
 
@@ -56,7 +63,7 @@ h1 {
 .sub {
   font-size: var(--font-sub1-size);
   font-weight: var(--font-weight-light);
-  color: var(--color-text-inverted);
+  color: aliceblue;
 }
 
 h2 {
@@ -67,12 +74,12 @@ h3 {
   font-size: var(--headline3-size);
 }
 
-main>h1 {
+main > h1 {
   width: calc(80% - 6rem);
 }
 
 /* NAVIGATION STRUCTURES */
-header>nav {
+header > nav {
   height: 100%;
   background-color: var(--color-menu-bg);
 }
@@ -92,25 +99,26 @@ nav a {
 
 /* Måske skal du lave en ny regel for logotype-wrapper, når du har lavet din logotype */
 #logotype-wrapper {
-  background-color: var(--color-logotype-bg);
+  background-color: light-dark(#889063, #1f2518);
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 3.6rem;
+  height: 5rem;
 }
 
-#logotype-wrapper>a {
+#logotype-wrapper > a {
   color: var(--color-text-logotype);
   font-size: var(--font-logotype-size);
   font-weight: var(--font-weight-medium);
   width: max-content;
   margin-left: 1rem;
+  background-color: light-dark(#889063, #1f2518);
 }
 
 /* Global menu */
 header nav li a {
   margin: 1.5rem;
-  background-color: var(--color-link-bg);
+  background-color: light-dark(#889063, #1f2518);
   color: var(--color-text);
   font-size: var(--followup-text-size);
   padding: 0.5rem 1rem;
@@ -118,7 +126,7 @@ header nav li a {
 }
 
 /* Pilen efter menu-tekst */
-header>nav li>a:after {
+header > nav li > a:after {
   content: " \2192";
 }
 
@@ -134,4 +142,171 @@ nav a:active {
 /* FOOTER */
 footer a {
   font-size: 0.7rem;
+}
+
+label {
+  display: block;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+button {
+  margin-top: 20px;
+  background: light-dark(#354024, #1b2012);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: light-dark(#889063, #1f2518);
+  color: black;
+}
+
+.forms {
+  font-weight: 700;
+  margin-top: 50px;
+}
+
+.registerh2 {
+  font-size: 25px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  background-color: light-dark(#354024, #1b2012);
+  color: #fff8f0;
+  text-align: center;
+}
+
+form {
+  background-color: rgb(255, 244, 235);
+  justify-content: center;
+}
+
+.regmain {
+  padding: 40px 0;
+}
+
+form {
+  font-family: "sans-serif";
+  background: light-dark(#fff8f0, #7d7061);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px light-dark(#354024, #1b2012);
+  color: light-dark(#1b2012, #fff8f0);
+}
+
+section.output {
+  font-family: "sans-serif";
+  background: light-dark(#fff8f0, #3a332e);
+  border-radius: 15px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 20px light-dark(#354024, #1b2012);
+  background-color: light-dark(#fff8f0, #7d7061);
+}
+
+section.output h2 {
+  color: light-dark(#889063, #1f2518);
+  font-size: 25px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-bottom: 2px solid light-dark(#889063, #1f2518);
+  display: inline-block;
+}
+
+section.output p {
+  margin: 10px 0;
+  font-size: 17px;
+  font-weight: 500;
+  color: light-dark(#889063, #1f2518);
+}
+
+section.output span {
+  font-weight: 300;
+  color: light-dark(#889063, #1f2518);
+}
+
+[popover] {
+  max-width: 70ch;
+  max-height: 70ch;
+  margin: auto;
+  opacity: 0;
+  transition: 1s allow-discrete;
+}
+::backdrop {
+  background: rgba(81, 126, 77, 0.533);
+}
+
+:popover-open {
+  display: grid;
+  opacity: 1;
+}
+
+@starting-style {
+  :popover-open {
+    opacity: 0;
+  }
+}
+
+.h1artikel {
+  color: #000000;
+  font-size: 25px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+.luk {
+  margin-bottom: 20px;
+}
+
+.cta_btn {
+  color: light-dark(#354024, #1b2012);
+}
+
+html {
+  background-color: light-dark(#cfbb99, #4a453b);
+}
+.icon {
+  width: 80px;
+}
+.billeder {
+  box-shadow: 5px 5px 5pxlight-dark(#354024, #1b2012);
+  border-radius: 10%;
+}
+.box-text {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 1em;
+}
+
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+#toggle {
+  cursor: pointer;
+}
+.logo {
+  width: 50px;
+  background: none;
+}
+
+footer {
+  padding: 30px;
+  border: solid #000000;
 }

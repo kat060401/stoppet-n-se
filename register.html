@@ -13,13 +13,15 @@
     <link rel="stylesheet" href="css/cards.css" />
     <link rel="stylesheet" href="css/form.css" />
     <link rel="icon" type="image/png" href="img/fav.png" />
+    <link rel="stylesheet" href="js/main.js" />
     <title>Emergency Site</title>
   </head>
   <body id="register">
     <header>
       <nav>
         <div id="logotype-wrapper" class="logo">
-          <a href="index.html"> LOGO-TYPE </a>
+          <a href="index.html"> <img src="img/logo.svg" class="logo" alt="" /> </a>
+          <a href="index.html"> </a>
         </div>
         <ul class="menu">
           <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
@@ -32,50 +34,65 @@
         </button>
       </nav>
     </header>
+    <button id="toggle" class="btn">Toggle</button>
+    <main class="regmain">
+      <form>
+        <h2 class="registerh2">Naturlig hjælp mod stoppet næse</h2>
 
-    <main>
-      <h1>INDBERET</h1>
-      <section id="form-section">
-        <article id="form-info">
-          <h2>Overskrift</h2>
-          <p>Tekst</p>
-        </article>
-        <form id="webform"></form>
-      </section>
-      <section id="form-summary">
+        <label for="name" class="forms">Dit navn</label>
+        <input type="text" id="name" name="name" placeholder="Skriv dit navn" />
+
+        <label for="cause" class="forms">Hvad tror du årsagen er?</label>
+        <select id="cause" name="cause">
+          <option value="">--Vælg en årsag--</option>
+          <option value="forkølelse">Forkølelse</option>
+          <option value="allergi">Allergi</option>
+          <option value="tør_luft">Tør luft</option>
+          <option value="andet">Andet</option>
+        </select>
+
+        <p class="forms">Hvor slemt er det?</p>
+        <label>
+          <input type="radio" name="severity" value="let" />
+          Let stoppet
+        </label>
+        <label>
+          <input type="radio" name="severity" value="moderat" />
+          Moderat stoppet
+        </label>
+        <label>
+          <input type="radio" name="severity" value="svær" />
+          Meget stoppet
+        </label>
+
+        <p class="forms">Hvad har du allerede prøvet?</p>
+        <label><input type="checkbox" name="tried" value="damp" /> Dampbad</label>
+        <label><input type="checkbox" name="tried" value="saltvand" /> Skyllet næsen med saltvand</label>
+        <label><input type="checkbox" name="tried" value="te" /> Drukket varm te</label>
+        <label><input type="checkbox" name="tried" value="hvile" /> Fået hvile</label>
+
+        <label for="notes" class="forms">Beskriv dine symptomer</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="Fx tryk i næsen, hovedpine, tør luft..."></textarea>
+
+        <label for="send"> <button type="submit">Send</button></label>
+      </form>
+
+      <section class="output">
         <h2>Summary</h2>
-        <article>
-          <p class="placeholder">Opsummering</p>
-        </article>
+        <div>
+          <p>Navn: <span id="navn_output"></span></p>
+          <p>Årsagen: <span id="aarsagen_output"></span></p>
+          <p>Hvor slemt er det: <span id="slemt_output"></span></p>
+          <p>Hvad har du allerede prøvet: <span id="provet_output"></span></p>
+          <p>Symptomer: <span id="symptomer_output"></span></p>
+        </div>
       </section>
     </main>
     <footer>
-      <nav class="some">
-        <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-      </nav>
-      <nav class="another">
-        <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-      </nav>
-      <nav class="yetanother">
-        <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-      </nav>
+      <p>© Katharina Emilie Nørskov</p>
     </footer>
     <script src="js/burger.js"></script>
-    <!-- <script src="js/main.js"></script> -->
+    <script src="js/register.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

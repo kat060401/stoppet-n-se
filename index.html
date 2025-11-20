@@ -12,18 +12,21 @@
     <link rel="stylesheet" href="css/burger.css" />
     <link rel="stylesheet" href="css/cards.css" />
     <link rel="icon" type="image/png" href="img/fav.png" />
+    <link rel="stylesheet" href="js/main.js" />
     <title>Emergency Site</title>
   </head>
   <body id="frontpage">
     <header>
       <nav>
         <div id="logotype-wrapper" class="logo">
-          <a href="index.html"> LOGO-TYPE </a>
+          <a href="index.html"> <img src="img/logo.svg" class="logo" alt="" /> </a>
         </div>
+        <div class="logo"></div>
         <ul class="menu">
           <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
           <li><a class="menuItem" href="register.html">Indberet</a></li>
         </ul>
+
         <button class="burger">
           <span class="line"></span>
           <span class="line"></span>
@@ -31,89 +34,119 @@
         </button>
       </nav>
     </header>
+
     <section id="main-disclamer">
       <div id="main-disclamer-content">
-        <img src="warning" alt="ICON" />
+        <img class="icon" src="img/ChatGPT Image 14. nov. 2025, 14.25.20.png" alt="ICON" />
         <div>
-          <h1>OVERSKRIFT</h1>
-          <p class="sub">Underrubrik</p>
+          <h1>Naturlig Lindring af Stoppet Næse</h1>
+          <p class="sub">Skånsomme metoder, der giver friere luftveje uden afhængighed eller kunstige produkter</p>
         </div>
       </div>
     </section>
+    <button id="toggle" class="btn">Toggle</button>
     <main>
       <section id="daily">
         <article class="daily_card">
-          <img src="" alt="teaser_img" />
+          <img class="billeder" src="img/Skærmbillede 2025-11-17 kl. 11.36.32.png" alt="teaser_img" />
           <div class="daily_text">
-            <h2>Teaser</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              magnam ducimus ea, sed minima asperiores.
-            </p>
-            <a href="" class="cta_btn">Se mere</a>
+            <details name="something">
+              <summary class="afprøv">Afprøv effektive løsninger her</summary>
+              <summary class="box-text">Afprøv effektive løsninger mod tilstoppet næse helt uden næsespray. Læs, hvad der faktisk virker.</summary>
+              <a href="instruction.html" class="cta_btn">Se mere </a>
+            </details>
           </div>
         </article>
         <article class="daily_card">
-          <img src="" alt="teaser_img" />
+          <img class="billeder" src="img/Firefly_Gemini Flash_kan du nu lave et billede af en mand der har stoppet næse 320191.png" alt="teaser_img" />
           <div class="daily_text">
-            <h2>Teaser</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              magnam ducimus ea, sed minima asperiores.
-            </p>
-            <a href="" class="cta_btn">Se mere</a>
+            <details name="something">
+              <summary class="afprøv">Har du stoppet næse?</summary>
+              <summary class="box-text">Udfyld skemaet og find din personlige vej til fri vejrtrækning uden afhængighed. En stoppet næse behøver ikke betyde næsespray. Der findes løsninger, der virker og de kan tilpasses dig. .</summary>
+              <a href="register.html" class="cta_btn">Se mere</a>
+            </details>
           </div>
         </article>
       </section>
       <section id="breaking">
         <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
+          <h3>Her er de bedste alternativer til en stoppet næse:</h3>
+          <p>"Mange oplever tilstoppet næse i hverdagen, især i perioder med forkølelse...</p>
+          <img src="img/1.png" alt="news_img" />
+          <button class="cta_btn" popovertarget="news_popover2">Læs mere</button>
+          <div popover id="news_popover2">
+            <h1 class="h1artikel">Her er de bedste alternativer til en stoppet næse:</h1>
+            <h2>Damp, saltvand og varme som skånsomme hjælpere</h2>
+            <p>
+              Varme dampindåndinger kan hjælpe med at løsne slim og åbne luftvejene, især hvis du er forkølet. Du kan enten bruge en skål med varmt vand eller tage et langt varmt bad. Samtidig er saltvandsopløsninger – enten som næsespray eller
+              næseskylning en sikker og effektiv måde at fugte slimhinderne og reducere irritation. Kombinationen af varme og saltvand kan give hurtig og naturlig lindring.
+            </p>
+            <img class="imgarticle" src="img/1.png" alt="" />
+            <h2>Urteteer, frisk luft og små hverdagsvaner</h2>
+            <p>
+              Urteteer som ingefær, kamille eller pebermynte kan virke let slimløsnende og give en behagelig varme indefra. En tur i den friske luft kan også gøre en stor forskel, da kølig luft midlertidigt kan mindske hævelse i næseslimhinderne.
+              Derudover kan simple rutiner som at drikke rigeligt vand, hæve hovedet under søvn eller holde hjemmets luftfugtighed stabil hjælpe med at holde næsen mere åben i hverdagen.
+            </p>
+            <button class="luk" popovertarget="news_popover2">luk</button>
+          </div>
+        </article>
+
+        <article class="news_card">
+          <h3>En guide til en god afvendingsmetode</h3>
+          <p>"At stoppe med næsespray kan være svært, men med en struktureret nedtrapningsplan...</p>
+          <img src="img/2.png" alt="news_img" />
+          <button class="cta_btn" popovertarget="news_popover3">Læs mere</button>
+          <div popover id="news_popover3">
+            <h1 class="h1artikel">En guide til en god afvendingsmetode</h1>
+            <h2>Brug sprayen i ét næsebor ad gangen</h2>
+            <p>
+              En af de mest effektive måder at trappe ud på er kun at bruge næsespray i det ene næsebor ad gangen. Det andet næsebor får dermed ro til at hele, mens du stadig kan få luft gennem det behandlede næsebor. Efter et par dage skifter du
+              side. Denne metode gør processen mere overkommelig og reducerer ubehaget.
+            </p>
+            <img class="imgarticle" src="img/2.png" alt="" />
+            <h2>Forlæng pauserne mellem hver brug</h2>
+            <p>
+              Hvis du normalt bruger næsespray flere gange om dagen, kan du begynde med at øge tidsrummet mellem hver dosis. Først med en time eller to – senere mere. Selvom det kan føles svært i starten, vil kroppen gradvist vænne sig til det mindre
+              forbrug, og trangen vil ofte falde af sig selv.
+            </p>
+
+            <button class="luk" popovertarget="news_popover3">luk</button>
+          </div>
         </article>
         <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
-        </article>
-        <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
+          <h3>Derfor skal du IKKE bruge næsepray:</h3>
+          <p>"Mange oplever, at næsespray hurtigt lindrer en tilstoppet næse...</p>
+          <img src="img/3.png" alt="news_img" />
+          <button class="cta_btn" popovertarget="news_popover">Læs mere</button>
+          <div popover id="news_popover">
+            <h1 class="h1artikel">Her er de bedste alternativer til en stoppet næse:</h1>
+
+            <h2>Fanget i sprayens kæder</h2>
+            <p>
+              For mange begynder det helt uskyldigt. En forkølelse, en tilstoppet næse og et hurtigt besøg på apoteket efter næsespray, der kan give fri luft. De første dage føles sprayen som en befrielse. Pludselig kan man trække vejret igen og sove
+              om natten. Men for flere end man tror, bliver den midlertidige hjælp langsomt til en vane – og i værste fald en afhængighed. Når næsespray bruges i mere end 7-10 dage i træk, vænner slimhinderne sig til den kunstige lindring. Sprayens
+              virkning får blodkarrene i næsen til at trække sig sammen, men når effekten aftager, udvider karrene sig igen – ofte endnu mere end før. Resultatet er en næse, der føles permanent stoppet, medmindre man bruger sprayen igen. Det bliver
+              en ond cirkel, hvor kroppen kræver det, som egentlig skulle hjælpe den. Afhængigheden kan vise sig i form af konstant tilstoppet næse, irritation, tørhed eller endda svækket lugtesans. Nogle beskriver det som at være “fanget i sprayens
+              kæder” præcis som billedet symboliserer: en midlertidig lettelse, der langsomt bliver et fængsel.
+            </p>
+            <img class="imgarticle" src="img/3.png" alt="" />
+            <h2>Når lindring bliver en fælde</h2>
+            <p>
+              Det kan føles svært at stoppe, men heldigvis er der veje ud af afhængigheden. Den mest skånsomme metode er en gradvis nedtrapning, hvor man enten reducerer antallet af gange man bruger sprayen om dagen, eller nøjes med at spraye i det
+              ene næsebor ad gangen. Efter få uger begynder næsens slimhinder at finde tilbage til deres naturlige balance. Der findes også saltvandssprays, næseskyl og fugtgivende produkter, der kan hjælpe næsen på en naturlig måde uden risiko for
+              afhængighed. I sværere tilfælde kan lægen vejlede i en mere struktureret udtrapning, eventuelt kombineret med kortvarig brug af mild steroidnæsespray. Det vigtigste er at bryde cirklen og at huske, at næsespray ikke skal være en fast
+              del af hverdagen. At trække vejret frit skal være naturligt, ikke noget man skal kæmpe for.
+            </p>
+            <button class="luk" popovertarget="news_popover">luk</button>
+          </div>
         </article>
       </section>
     </main>
 
     <footer>
-      <nav class="some">
-        <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-      </nav>
-      <nav class="another">
-        <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-      </nav>
-      <nav class="yetanother">
-        <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-      </nav>
+      <p>© Katharina Emilie Nørskov</p>
     </footer>
     <script src="js/burger.js"></script>
-    <!-- <script src="js/main.js"></script> -->
+    <script src="js/main.js"></script>
   </body>
 </html>
